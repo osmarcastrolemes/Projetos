@@ -40,7 +40,7 @@
             padding: 20px;
             text-align: center;
         }
-        #contatoSection, #conteudoPrincipal {
+        #contatoSection, #sobreSection, #conteudoPrincipal {
             display: none;
         }
         footer {
@@ -56,9 +56,8 @@
 </head>
 <body>
     <header>
-	<h1>Bem-vindo ao Meu Site</h1>
-        <img src="https://i.ibb.co/Hn7gvxW/foto-3-x-4-osmar.jpg">
-        
+        <img src="caminho/para/sua-imagem.jpg" alt="Logo">
+        <h1>Bem-vindo ao Meu Site</h1>
     </header>
     
     <nav>
@@ -76,6 +75,11 @@
             <h2>Relatório Power BI</h2>
             <iframe title="Contas Osmar Power BI" width="600" height="373.5" src="https://app.powerbi.com/view?r=eyJrIjoiMTA5NDMyYzMtMjM5Mi00MmZjLTljOWUtMWM0MmRlMDczMjgwIiwidCI6IjFhM2E2NzNhLWRmMzEtNDI3NC05NGViLWU4NzRjNTE1MTc3NSJ9" frameborder="0" allowFullScreen="true"></iframe>
         </div>
+
+        <div id="sobreSection">
+            <h2>Sobre</h2>
+            <p>Sou formado em Análise e Desenvolvimento de Sistemas, com ampla experiência em infraestrutura de TI, atuando na implantação e gestão de diversos projetos ao longo da minha carreira. Atualmente, trabalho como Analista de BI, realizando manutenção em relatórios e desenvolvendo novas visões para análise e tomada de decisões.</p>
+        </div>
         
         <div id="contatoSection">
             <h2>Contato</h2>
@@ -92,11 +96,14 @@
         function mostrarConteudo(secao) {
             // Esconde todas as seções
             document.getElementById('conteudoPrincipal').style.display = 'none';
+            document.getElementById('sobreSection').style.display = 'none';
             document.getElementById('contatoSection').style.display = 'none';
             
             // Mostra a seção correspondente ao menu clicado
-            if (secao === 'home' || secao === 'sobre' || secao === 'servicos') {
+            if (secao === 'home' || secao === 'servicos') {
                 document.getElementById('conteudoPrincipal').style.display = 'block';
+            } else if (secao === 'sobre') {
+                document.getElementById('sobreSection').style.display = 'block';
             } else if (secao === 'contato') {
                 document.getElementById('contatoSection').style.display = 'block';
             }
