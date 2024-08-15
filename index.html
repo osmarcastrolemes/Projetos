@@ -17,6 +17,12 @@
             padding: 15px;
             text-align: center;
         }
+        header img {
+            max-width: 150px;
+            height: auto;
+            display: block;
+            margin: 0 auto 10px auto;
+        }
         nav {
             text-align: center;
             margin: 20px 0;
@@ -46,6 +52,7 @@
 </head>
 <body>
     <header>
+        <img src="caminho/para/sua-imagem.jpg" alt="Logo">
         <h1>Bem-vindo ao Meu Site</h1>
     </header>
     
@@ -53,15 +60,19 @@
         <a href="#">Home</a>
         <a href="#">Sobre</a>
         <a href="#">Serviços</a>
-        <a href="#">Contato</a>
+        <a href="#contato">Contato</a>
     </nav>
     
     <main>
         <h2>Introdução</h2>
-        <p> Olá, seja bem vindo(a) a minha página, conheça um pouco dos meus projetos desenvolvidos.</p>
+        <p>Olá, seja bem vindo(a) a minha página, conheça um pouco dos meus projetos desenvolvidos.</p>
         
         <h2>Relatório Power BI</h2>
         <iframe title="Contas Osmar Power BI" width="600" height="373.5" src="https://app.powerbi.com/view?r=eyJrIjoiMTA5NDMyYzMtMjM5Mi00MmZjLTljOWUtMWM0MmRlMDczMjgwIiwidCI6IjFhM2E2NzNhLWRmMzEtNDI3NC05NGViLWU4NzRjNTE1MTc3NSJ9" frameborder="0" allowFullScreen="true"></iframe>
+        
+        <h2 id="contato">Contato</h2>
+        <p>Osmar de Castro Lemes<br>
+           Telefone: (42) 99941-7752</p>
     </main>
     
     <footer>
