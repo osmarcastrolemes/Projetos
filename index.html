@@ -18,7 +18,7 @@
             text-align: center;
         }
         header img {
-            max-width: 100%;
+            max-width: 150px;
             height: auto;
             display: block;
             margin: 0 auto 10px auto;
@@ -32,7 +32,6 @@
             text-decoration: none;
             color: #333;
             cursor: pointer;
-            font-size: 18px;
         }
         nav a:hover {
             color: #007BFF;
@@ -41,10 +40,88 @@
             padding: 20px;
             text-align: center;
         }
-        main iframe {
-            max-width: 100%;
-            height: auto;
-            margin-top: 20px;
-        }
         #contatoSection, #sobreSection, #conteudoPrincipal, #servicosSection {
-            display: n
+            display: none;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bem-vindo ao Meu Site</h1>
+        <img src="https://i.ibb.co/Hn7gvxW/foto-3-x-4-osmar.jpg">
+    </header>
+    
+    <nav>
+        <a onclick="mostrarConteudo('home')">Home</a>
+        <a onclick="mostrarConteudo('sobre')">Sobre</a>
+        <a onclick="mostrarConteudo('servicos')">Serviços</a>
+        <a onclick="mostrarConteudo('contato')">Contato</a>
+    </nav>
+    
+    <main>
+        <div id="conteudoPrincipal">
+            <h2>Introdução</h2>
+            <p>Olá, seja bem-vindo(a) à minha página, conheça um pouco dos meus projetos desenvolvidos.</p>
+            
+            <h2>Relatório Power BI</h2>
+            <iframe title="Contas Osmar Power BI" width="600" height="373.5" src="https://app.powerbi.com/view?r=eyJrIjoiMTA5NDMyYzMtMjM5Mi00MmZjLTljOWUtMWM0MmRlMDczMjgwIiwidCI6IjFhM2E2NzNhLWRmMzEtNDI3NC05NGViLWU4NzRjNTE1MTc3NSJ9" frameborder="0" allowFullScreen="true"></iframe>
+        </div>
+
+        <div id="sobreSection">
+            <h2>Sobre</h2>
+            <p>Sou formado em Análise e Desenvolvimento de Sistemas, com ampla experiência em infraestrutura de TI, atuando na implantação e gestão de diversos projetos ao longo da minha carreira. Atualmente, trabalho como Analista de BI, realizando manutenção em relatórios e desenvolvendo novas visões para análise e tomada de decisões.</p>
+        </div>
+        
+        <div id="servicosSection">
+            <h2>Serviços</h2>
+            <ul style="list-style-type: none; padding: 0;">
+                <li>Consultoria Técnica</li>
+                <li>Desenvolvimento de Dashboards</li>
+            </ul>
+        </div>
+
+        <div id="contatoSection">
+            <h2>Contato</h2>
+            <p>Osmar de Castro Lemes<br>
+               Telefone: (42) 99941-7752</p>
+        </div>
+    </main>
+    
+    <footer>
+        &copy; 2024 Meu Site. Todos os direitos reservados.
+    </footer>
+
+    <script>
+        function mostrarConteudo(secao) {
+            // Esconde todas as seções
+            document.getElementById('conteudoPrincipal').style.display = 'none';
+            document.getElementById('sobreSection').style.display = 'none';
+            document.getElementById('contatoSection').style.display = 'none';
+            document.getElementById('servicosSection').style.display = 'none';
+            
+            // Mostra a seção correspondente ao menu clicado
+            if (secao === 'home') {
+                document.getElementById('conteudoPrincipal').style.display = 'block';
+            } else if (secao === 'sobre') {
+                document.getElementById('sobreSection').style.display = 'block';
+            } else if (secao === 'servicos') {
+                document.getElementById('servicosSection').style.display = 'block';
+            } else if (secao === 'contato') {
+                document.getElementById('contatoSection').style.display = 'block';
+            }
+        }
+
+        // Exibe a seção principal ao carregar a página
+        mostrarConteudo('home');
+    </script>
+</body>
+</html>
